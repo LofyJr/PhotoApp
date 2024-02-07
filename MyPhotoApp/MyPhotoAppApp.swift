@@ -11,7 +11,7 @@ import SwiftUI
 struct MyPhotoAppApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            FeedView(feedViewModel: FeedViewModel())
         }
     }
 }
