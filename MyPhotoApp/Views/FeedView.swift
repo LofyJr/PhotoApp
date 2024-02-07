@@ -13,6 +13,7 @@ func screenSize() -> CGSize {
 
 struct FeedView: View {
     @ObservedObject var feedViewModel: FeedViewModel
+    @ObservedObject var commentsViewModel: CommentsViewModel
     @State var show: Bool = false
     @State var activeIndex: Int = -1
     var imageViewModel: ImageViewModel
@@ -20,6 +21,7 @@ struct FeedView: View {
     init(feedViewModel: FeedViewModel) {
         self.feedViewModel = feedViewModel
         self.imageViewModel = ImageViewModel()
+        self.commentsViewModel = CommentsViewModel()
     }
 
     var feedListView: some View {
@@ -27,7 +29,7 @@ struct FeedView: View {
             ScrollView {
                 ForEach(self.feedViewModel.posts.indices , id: \.self) { index in
                     GeometryReader { reader in
-                        CardView(show: self.$show, post: self.$feedViewModel.posts[index], activeIndex: self.$activeIndex, index: index, imageViewModel: self.imageViewModel)
+                        CardView(show: self.$show, post: self.$feedViewModel.posts[index], activeIndex: self.$activeIndex, commentsViewModel: self.commentsViewModel, index: index, imageViewModel: self.imageViewModel)
                             .padding(.top, self.show ? 20 : 0)
                             .offset(y: self.show ? -reader.frame(in: .global).minY + 40 : 0)
                     }

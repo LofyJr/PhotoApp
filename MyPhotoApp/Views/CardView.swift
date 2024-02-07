@@ -11,6 +11,7 @@ struct CardView: View {
     @Binding var show: Bool
     @Binding var post: Post
     @Binding var activeIndex: Int
+    @ObservedObject var commentsViewModel: CommentsViewModel
     var index: Int
     var imageViewModel: ImageViewModel
 
@@ -58,6 +59,12 @@ struct CardView: View {
             }
             .padding(.top)
             .padding(.bottom)
+
+            if self.post.showComment {
+                CommentsView(post: self.$post, commentsViewModel: self.commentsViewModel, imageViewModel: self.imageViewModel)
+                    .opacity(self.post.showComment ? 1 : 0)
+                    .animation(.easeInOut)
+            }
         }
         .padding(.leading)
         .padding(.trailing)

@@ -14,6 +14,10 @@
 		26010B582B73C68B007AAC66 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B572B73C68B007AAC66 /* NetworkError.swift */; };
 		26010B5A2B73C6CC007AAC66 /* ImageViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B592B73C6CC007AAC66 /* ImageViewModel.swift */; };
 		26010B5D2B73E2E9007AAC66 /* ImageCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B5C2B73E2E9007AAC66 /* ImageCache.swift */; };
+		26010B612B73F6EA007AAC66 /* GetPostCommentsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B602B73F6EA007AAC66 /* GetPostCommentsRepository.swift */; };
+		26010B632B73F8F2007AAC66 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B622B73F8F2007AAC66 /* Comment.swift */; };
+		26010B652B73FA14007AAC66 /* CommentsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B642B73FA14007AAC66 /* CommentsViewModel.swift */; };
+		26010B672B73FC5A007AAC66 /* CommentsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 26010B662B73FC5A007AAC66 /* CommentsView.swift */; };
 		261963462B72728000E7D515 /* MyPhotoAppApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261963452B72728000E7D515 /* MyPhotoAppApp.swift */; };
 		261963482B72728000E7D515 /* FeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 261963472B72728000E7D515 /* FeedView.swift */; };
 		2619634A2B72728200E7D515 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 261963492B72728200E7D515 /* Assets.xcassets */; };
@@ -34,6 +38,10 @@
 		26010B572B73C68B007AAC66 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		26010B592B73C6CC007AAC66 /* ImageViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageViewModel.swift; sourceTree = "<group>"; };
 		26010B5C2B73E2E9007AAC66 /* ImageCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageCache.swift; sourceTree = "<group>"; };
+		26010B602B73F6EA007AAC66 /* GetPostCommentsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostCommentsRepository.swift; sourceTree = "<group>"; };
+		26010B622B73F8F2007AAC66 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
+		26010B642B73FA14007AAC66 /* CommentsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsViewModel.swift; sourceTree = "<group>"; };
+		26010B662B73FC5A007AAC66 /* CommentsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentsView.swift; sourceTree = "<group>"; };
 		261963422B72728000E7D515 /* MyPhotoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyPhotoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		261963452B72728000E7D515 /* MyPhotoAppApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyPhotoAppApp.swift; sourceTree = "<group>"; };
 		261963472B72728000E7D515 /* FeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedView.swift; sourceTree = "<group>"; };
@@ -73,6 +81,7 @@
 				26010B502B73BCDD007AAC66 /* GetPostsRepository.swift */,
 				26010B552B73C59E007AAC66 /* ImageRepository.swift */,
 				26010B572B73C68B007AAC66 /* NetworkError.swift */,
+				26010B602B73F6EA007AAC66 /* GetPostCommentsRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -81,6 +90,7 @@
 			isa = PBXGroup;
 			children = (
 				26010B532B73BDC0007AAC66 /* Post.swift */,
+				26010B622B73F8F2007AAC66 /* Comment.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -159,6 +169,7 @@
 				2619635B2B727B1200E7D515 /* RoundedImageView.swift */,
 				2619635D2B727B3900E7D515 /* NavigationBarView.swift */,
 				2619635F2B728EE500E7D515 /* CardView.swift */,
+				26010B662B73FC5A007AAC66 /* CommentsView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -168,6 +179,7 @@
 			children = (
 				261963622B7290EC00E7D515 /* FeedViewModel.swift */,
 				26010B592B73C6CC007AAC66 /* ImageViewModel.swift */,
+				26010B642B73FA14007AAC66 /* CommentsViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -245,18 +257,22 @@
 			files = (
 				261963632B7290EC00E7D515 /* FeedViewModel.swift in Sources */,
 				2619635C2B727B1200E7D515 /* RoundedImageView.swift in Sources */,
+				26010B672B73FC5A007AAC66 /* CommentsView.swift in Sources */,
 				261963482B72728000E7D515 /* FeedView.swift in Sources */,
 				26010B4E2B73AEC8007AAC66 /* ActivityIndicatorView.swift in Sources */,
 				261963462B72728000E7D515 /* MyPhotoAppApp.swift in Sources */,
 				261963592B72789000E7D515 /* ColorExtensions.swift in Sources */,
+				26010B612B73F6EA007AAC66 /* GetPostCommentsRepository.swift in Sources */,
 				261963602B728EE500E7D515 /* CardView.swift in Sources */,
 				26010B562B73C59E007AAC66 /* ImageRepository.swift in Sources */,
 				26010B512B73BCDD007AAC66 /* GetPostsRepository.swift in Sources */,
 				26010B582B73C68B007AAC66 /* NetworkError.swift in Sources */,
+				26010B632B73F8F2007AAC66 /* Comment.swift in Sources */,
 				2619635E2B727B3900E7D515 /* NavigationBarView.swift in Sources */,
 				26010B542B73BDC0007AAC66 /* Post.swift in Sources */,
 				26010B5D2B73E2E9007AAC66 /* ImageCache.swift in Sources */,
 				26010B5A2B73C6CC007AAC66 /* ImageViewModel.swift in Sources */,
+				26010B652B73FA14007AAC66 /* CommentsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
