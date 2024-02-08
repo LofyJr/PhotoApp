@@ -37,8 +37,8 @@ struct FeedView: View {
                     .offset(x: self.activeIndex != index && self.show ? screenSize().width + 40 : 0)
                 }
             }
+            .offset(y: self.show ? -200 : 0)
             .frame(height: self.show ? screenSize().height + geo.frame(in: .global).minY : geo.frame(in: .global).height)
-            .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration:  0))
             .edgesIgnoringSafeArea(.bottom)
         }
     }
@@ -57,7 +57,7 @@ struct FeedView: View {
     var showView: some View {
         switch self.feedViewModel.viewState {
             case .loading:
-                return AnyView(loadingView)
+                return AnyView(feedListView)
             default:
                 return AnyView(feedListView)
         }
@@ -67,7 +67,6 @@ struct FeedView: View {
         ZStack{
             VStack {
                 NavigationBarView()
-                    .animation(.spring(response: 0.5, dampingFraction: 0.6, blendDuration:  0))
                     .offset(y: self.show ? -200 : 0)
                 Spacer()
                 VStack {
